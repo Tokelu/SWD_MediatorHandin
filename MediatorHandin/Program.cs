@@ -4,7 +4,7 @@ using System;
 
 namespace MediatorHandin
 {
-    class Mediator
+    class Program
     {
         // The main part, where all the interactions take place. 
         static void Main()

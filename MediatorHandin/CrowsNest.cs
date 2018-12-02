@@ -7,7 +7,10 @@ namespace MediatorHandin
 
     class CrowsNest : AbstractCrowsNest
     {
+        //Creating the list for the characters in the "chat room" 
         private Dictionary<string, Character> _characters = new Dictionary<string, Character>();
+
+        //adding the characters to the list. 
         public override void Register(Character character)
         {
             if (!_characters.ContainsValue(character))
@@ -17,6 +20,7 @@ namespace MediatorHandin
             character.CrowsNest = this;
         }
 
+        //The send method. 
         public override void Send(string from, string to, string message)
         {
             Character character = _characters[to];

@@ -28,13 +28,13 @@ namespace MediatorHandin
         }
         
 
-        // Sends message to given character
+        // Sends message to given character using the overridden send method
         public void Send(string to, string message)
         {
             _crowsNest.Send(_name, to, message);
         }
 
-        // Receives message from given character
+        // Receives message from given character - formatting the output
         public virtual void Receive(string from, string message)
         {
             Console.WriteLine("{0} to {1}: '{2}'", from, Name, message);
